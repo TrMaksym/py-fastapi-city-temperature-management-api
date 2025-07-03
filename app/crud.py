@@ -5,7 +5,7 @@ from . import schemas, models
 
 
 def create_city(db: Session, city: schemas.CityCreate):
-    db_city = models.City(name=city.name)
+    db_city = models.City(name=city.name, additional_info=city.additional_info)
     db.add(db_city)
     db.commit()
     db.refresh(db_city)
