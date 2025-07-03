@@ -9,8 +9,9 @@ class CityBase(BaseModel):
     additional_info: Optional[str] = None
 
 
-class CityCreate(CityBase):
-    pass
+class CityCreate(BaseModel):
+    name: str
+    additional_info: Optional[str] = None
 
 
 class City(CityBase):
